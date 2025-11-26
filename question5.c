@@ -205,4 +205,13 @@ int main()
     freeAll(&buffer);
     printf("Goodbye!\n");
     return 0;
+
 }
+
+/*
+    Why Dynamic Allocation is better than fixed arrays:
+    - Fixed array like char lines[1000][1000] wastes 1MB even if user types 1 line
+    - Our method uses only ~100 bytes for 10 short lines
+    - Can handle 100,000+ lines if needed
+    - shrinkToFit removes waste after deletions
+*/
